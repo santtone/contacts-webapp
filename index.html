@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test App</title>
+
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet"
+          type="text/css">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+<body>
+<script>
+    // Name space
+    var contactsApp = {};
+</script>
+<script src="contact.js"></script>
+<script src="contact-service.js"></script>
+<script src="script.js"></script>
+
+<!-- Sample comment -->
+<div class="title-container">
+    <h3 id="title" class="title">Contacts</h3>
+</div>
+
+<button class="mdc-button" onclick="contactsApp.search()">Search</button>
+
+<div>
+    <ul id="contactList"></ul>
+</div>
+
+</body>
+</html>
