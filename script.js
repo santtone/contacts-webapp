@@ -3,7 +3,6 @@ contactsApp.search = function () {
     function onGetReady(contacts) {
         contactsApp.populateContactList(contacts);
         contactsApp.showContactsOnMap(contacts);
-        contacts.forEach(c => c.print());
     }
 
     contactsApp.contactService.getAll(onGetReady);

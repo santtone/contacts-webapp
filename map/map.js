@@ -1,10 +1,11 @@
 contactsApp.map = (function () {
 
-    let map;
+    let map; // OpenLayers map
     let layer;
     let source;
     const mapProjection = 'EPSG:3857';
     const dataProjection = 'EPSG:4326';
+    const markerColor = 'rgba(13, 106, 168, 0.9)';
 
     function init() {
         source = new ol.source.Vector();
@@ -15,7 +16,7 @@ contactsApp.map = (function () {
                     image: new ol.style.Circle({
                         radius: 8,
                         fill: new ol.style.Fill({
-                            color: 'rgba(13, 106, 168, 1)'
+                            color: markerColor
                         })
                     })
                 });
@@ -35,19 +36,20 @@ contactsApp.map = (function () {
                 projection: mapProjection
             })
         });
+        // Add feature popups
+        contactsApp.mapPopup.addToMap(map);
     }
 
     return {
         initialize: () => init(),
         updateSource: (featureCollection) => {
-            source.clear();
+            source.clear(); // removes existing features from source
             const features = (new ol.format.GeoJSON()).readFeatures(featureCollection, {
                 featureProjection: mapProjection,
                 dataProjection: dataProjection
             });
             source.addFeatures(features);
-            map.getView().fit(source.getExtent());
+            map.getView().fit(source.getExtent()); // fits map to features
         }
     }
-
 })();

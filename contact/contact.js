@@ -9,10 +9,7 @@ contactsApp.Contact = function (firstName, lastName, location) {
         firstName: firstName,
         lastName: lastName,
         location: location,
-        displayName: getDisplayName(),
-        print: () => {
-            console.log(getDisplayName());
-        }
+        displayName: getDisplayName()
     }
 };
 

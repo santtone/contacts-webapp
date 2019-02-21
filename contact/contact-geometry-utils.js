@@ -6,6 +6,7 @@ contactsApp.contactGeometryUtils = (function () {
                 features: contacts.map(c => {
                     return {
                         type: 'Feature',
+                        properties: c,
                         geometry: {
                             type: 'Point',
                             coordinates: c.location
