@@ -2,6 +2,7 @@ contactsApp.search = function () {
 
     function onGetReady(contacts) {
         contactsApp.populateContactList(contacts);
+        contactsApp.showContactsOnMap(contacts);
         contacts.forEach(c => c.print());
     }
 
@@ -16,4 +17,14 @@ contactsApp.populateContactList = function (contacts) {
         item.innerHTML = c.displayName;
         contactList.appendChild(item);
     });
+};
+
+contactsApp.showContactsOnMap = function (contacts) {
+    const featureCollection = contactsApp.contactGeometryUtils.contactsToFeatureCollection(contacts);
+    contactsApp.map.updateSource(featureCollection);
+};
+
+// called on body's onload event
+contactsApp.onLoad = function () {
+    contactsApp.map.initialize();
 };

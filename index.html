@@ -2,25 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Test App</title>
+    <title>Contacts App</title>
 
     <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet"
           type="text/css">
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="lib/ol.css">
     <link type="text/css" rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onload="contactsApp.onLoad()">
 <script>
     // Name space
-    var contactsApp = {};
+    const contactsApp = {};
 </script>
-<script src="contact.js"></script>
-<script src="contact-service.js"></script>
+<script src="lib/ol.js"></script>
+<script src="contact/contact.js"></script>
+<script src="contact/contact-geometry-utils.js"></script>
+<script src="contact/contact-service.js"></script>
+<script src="map/map.js"></script>
 <script src="script.js"></script>
 
 <!-- Sample comment -->
 <div class="title-container">
-    <h3 id="title" class="title">Contacts</h3>
+    <p class="title">Contacts</p>
 </div>
 
 <button class="mdc-button" onclick="contactsApp.search()">Search</button>
@@ -28,6 +32,8 @@
 <div>
     <ul id="contactList"></ul>
 </div>
+
+<div id="map" style="width: 400px; height: 400px"></div>
 
 </body>
 </html>

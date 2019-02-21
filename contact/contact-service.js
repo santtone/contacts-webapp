@@ -2,18 +2,6 @@ contactsApp.contactService = (function () {
 
     const url = 'https://tfe-training.azurewebsites.net/api/contacts';
 
-    let contacts = [];
-
-    const initContacts = function () {
-        contacts = [
-            contactsApp.Contact('Sami', 'Anttonen'),
-            contactsApp.Contact('Aimo', 'Matikainen'),
-            contactsApp.Contact('Ari', 'Porokka'),
-            contactsApp.Contact('Kirsi', 'Toropainen')
-        ];
-    }();
-
-
     return {
         getAll: (onReady) => {
             const http = new XMLHttpRequest();
@@ -23,7 +11,8 @@ contactsApp.contactService = (function () {
                     contacts = contacts.map(c => {
                         return contactsApp.Contact(
                             c.firstName,
-                            c.lastName
+                            c.lastName,
+                            c.location
                         )
                     });
                     onReady(contacts);
@@ -33,5 +22,4 @@ contactsApp.contactService = (function () {
             http.send();
         }
     }
-
 })();

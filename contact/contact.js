@@ -1,5 +1,5 @@
 //Factory Function
-contactsApp.Contact = function (firstName, lastName) {
+contactsApp.Contact = function (firstName, lastName, location) {
 
     function getDisplayName() {
         return (`${firstName} ${lastName}`);
@@ -8,6 +8,7 @@ contactsApp.Contact = function (firstName, lastName) {
     return {
         firstName: firstName,
         lastName: lastName,
+        location: location,
         displayName: getDisplayName(),
         print: () => {
             console.log(getDisplayName());
