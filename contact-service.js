@@ -1,10 +1,10 @@
 contactsApp.contactService = (function () {
 
-    var url = 'https://tfe-training.azurewebsites.net/api/contacts';
+    const url = 'https://tfe-training.azurewebsites.net/api/contacts';
 
-    var contacts = [];
+    let contacts = [];
 
-    var initContacts = function () {
+    const initContacts = function () {
         contacts = [
             contactsApp.Contact('Sami', 'Anttonen'),
             contactsApp.Contact('Aimo', 'Matikainen'),
@@ -16,10 +16,10 @@ contactsApp.contactService = (function () {
 
     return {
         getAll: (onReady) => {
-            var http = new XMLHttpRequest();
+            const http = new XMLHttpRequest();
             http.onreadystatechange = function () {
                 if (this.readyState === 4 && this.status === 200) {
-                    var contacts = JSON.parse(http.response);
+                    let contacts = JSON.parse(http.response);
                     contacts = contacts.map(c => {
                         return contactsApp.Contact(
                             c.firstName,

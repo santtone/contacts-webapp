@@ -9,10 +9,10 @@ contactsApp.search = function () {
 };
 
 contactsApp.populateContactList = function (contacts) {
-    var contactList = document.getElementById('contactList');
+    const contactList = document.getElementById('contactList');
     contactList.innerHTML = '';
     contacts.forEach(c => {
-        var item = document.createElement('li');
+        const item = document.createElement('li');
         item.innerHTML = c.displayName;
         contactList.appendChild(item);
     });
