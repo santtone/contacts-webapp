@@ -1,0 +1,6 @@
+<mat-nav-list>
+  <ca-contact-list-item *ngFor="let contact of contacts"
+                        [contact]="contact"
+                        (selected)="onContactSelected($event)">
+  </ca-contact-list-item>
+</mat-nav-list>

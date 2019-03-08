@@ -1,6 +1,4 @@
-<div>
-  <mat-form-field>
-    <input matInput placeholder="Title" [(ngModel)]="title">
-  </mat-form-field>
-  <button mat-button color="primary" (click)="onPushMe($event)">Push me</button>
-</div>
+<mat-toolbar color="primary">
+  <span>Contacts App</span>
+</mat-toolbar>
+<router-outlet></router-outlet>
