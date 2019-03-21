@@ -13,6 +13,10 @@ export const RouteConfig: Routes = [
     component: ContactListComponent
   },
   {
+    path: 'contacts/new',
+    component: ContactDetailsComponent,
+  },
+  {
     path: 'contacts/:id',
     component: ContactDetailsComponent,
   }

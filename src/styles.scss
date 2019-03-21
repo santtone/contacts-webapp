@@ -4,6 +4,7 @@
 html, body {
   padding: 0;
   margin: 0;
+  background: #EEEEEE;
 }
 
 @font-face {
@@ -17,4 +18,19 @@ html, body {
   font-family: 'Material Icons', serif;
   font-size: 24px;
   line-height: 100%;
+}
+
+.ca-fab {
+  position: fixed !important;
+  bottom: 20px;
+  right: 20px;
+}
+
+.ca-card-container {
+  padding: 16px;
+}
+
+.ca-card {
+  max-width: 500px;
+  width: 100%;
 }

@@ -1,3 +1,25 @@
-<div *ngIf="contact">
-  {{contact.firstName}}
+<div *ngIf="contact" fxLayout="column" fxLayoutAlign="start center" class="ca-card-container">
+  <mat-card fxLayout="column" class="ca-card">
+    <div fxLayout="row" fxLayoutAlign="center center">
+      <mat-icon class="ca-contact-details-icon">accessible_forward</mat-icon>
+    </div>
+    <mat-form-field>
+      <input matInput placeholder="First name" [(ngModel)]="contact.firstName">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Last name" [(ngModel)]="contact.lastName">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Street address" [(ngModel)]="contact.streetAddress">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Post code" [(ngModel)]="contact.postCode">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="City" [(ngModel)]="contact.city">
+    </mat-form-field>
+  </mat-card>
 </div>
+<button mat-fab color="accent" class="ca-fab" (click)="onSave()">
+  <mat-icon>check</mat-icon>
+</button>

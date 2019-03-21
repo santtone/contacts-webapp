@@ -23,8 +23,11 @@ export class ContactListComponent implements OnInit {
   }
 
   onContactSelected(id: number): void {
-    console.log(`TODO: navigate to contact ${id}`);
     this.router.navigate(['contacts', id]);
+  }
+
+  onContactAdd() {
+    this.router.navigate(['contacts/new']);
   }
 
 }

@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {Contact} from '../contact';
 import {ContactService} from '../services/contact.service';
+import {take} from 'rxjs/operators';
 
 @Component({
   selector: 'ca-contact-details',
@@ -17,9 +18,19 @@ export class ContactDetailsComponent implements OnInit {
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
-    this.contactService.getById(Number(id)).subscribe(contact => {
-      this.contact = contact;
-    });
+    if (!id) {
+      this.contact = new Contact();
+    } else {
+      this.contactService.getById(Number(id)).subscribe(contact => {
+        this.contact = contact;
+      });
+    }
+  }
+
+  onSave() {
+    // if contact has id --> update, else create
+    console.log(this.contact);
+    console.log('TODO');
   }
 
 }

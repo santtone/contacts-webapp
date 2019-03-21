@@ -1,6 +1,13 @@
-<mat-nav-list>
-  <ca-contact-list-item *ngFor="let contact of contacts | orderBy: 'lastName'"
-                        [contact]="contact"
-                        (selected)="onContactSelected($event)">
-  </ca-contact-list-item>
-</mat-nav-list>
+<div class="ca-card-container" fxLayout="column" fxLayoutAlign="start center">
+  <mat-card class="ca-card">
+    <mat-nav-list>
+      <ca-contact-list-item *ngFor="let contact of contacts | orderBy: 'lastName'"
+                            [contact]="contact"
+                            (selected)="onContactSelected($event)">
+      </ca-contact-list-item>
+    </mat-nav-list>
+  </mat-card>
+</div>
+<button mat-fab color="accent" class="ca-fab" (click)="onContactAdd()">
+  <mat-icon>add</mat-icon>
+</button>
