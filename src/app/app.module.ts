@@ -10,22 +10,32 @@ import {RouteConfig} from './config/route-config';
 import {ContactService} from './contact/services/contact.service';
 import {ContactListItemComponent} from './contact/contact-list/contact-list-item/contact-list-item.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import {ContactAddressToTextPipe} from './contact/pipes/contact-address-to-text.pipe';
+import {HttpClientModule} from '@angular/common/http';
+import {ContactHttpService} from './contact/services/contact-http.service';
+import {NgPipesModule} from 'ngx-pipes';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactListComponent,
     ContactDetailsComponent,
-    ContactListItemComponent
+    ContactListItemComponent,
+    ContactAddressToTextPipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
     MaterialDesignModule,
     FlexLayoutModule,
-    RouterModule.forRoot(RouteConfig)
+    HttpClientModule,
+    RouterModule.forRoot(RouteConfig),
+    NgPipesModule
   ],
-  providers: [ContactService],
+  providers: [
+    ContactService,
+    ContactHttpService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

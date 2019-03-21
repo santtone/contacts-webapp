@@ -1,5 +1,5 @@
 <mat-nav-list>
-  <ca-contact-list-item *ngFor="let contact of contacts"
+  <ca-contact-list-item *ngFor="let contact of contacts | orderBy: 'lastName'"
                         [contact]="contact"
                         (selected)="onContactSelected($event)">
   </ca-contact-list-item>

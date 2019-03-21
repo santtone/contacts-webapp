@@ -2,8 +2,8 @@
   <div fxLayout="row" fxFlexFill fxLayoutAlign="start center">
     <mat-icon mat-list-icon class="ca-contact-list-item-icon">accessible_forward</mat-icon>
     <div fxFlex fxLayout="column">
-      <div class="ca-contact-list-item-title">{{contact.firstName}} {{contact.lastName}}</div>
-      <div class="ca-contact-list-item-subtitle">{{contact.postCode}} {{contact.city}}</div>
+      <div class="ca-contact-list-item-title">{{contact.lastName}} {{contact.firstName}}</div>
+      <div class="ca-contact-list-item-subtitle">{{contact | contactAddressToText}}</div>
     </div>
   </div>
 </mat-list-item>

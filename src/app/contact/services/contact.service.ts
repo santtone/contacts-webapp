@@ -1,25 +1,43 @@
 import {Injectable} from '@angular/core';
 import {Contact} from '../contact';
+import {BehaviorSubject, Observable, of} from 'rxjs';
+import {ContactHttpService} from './contact-http.service';
+import {skipWhile, switchMap, tap} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ContactService {
 
-  private contacts: Contact[];
+  private contacts: BehaviorSubject<Contact[]>;
 
-  constructor() {
-    this.contacts = [
-      new Contact(1, 'Sami', 'Anttonen', 'Käsityöläiskatu 4', 'Kouvola', 45120),
-      new Contact(2, 'Joku', 'Muu', 'Käsityöläiskatu 4', 'Kouvola', 45120)
-    ];
+  constructor(private contactHttpService: ContactHttpService) {
+    this.contacts = new BehaviorSubject([]);
   }
 
-  get(): Contact[] {
+  get(): Observable<Contact[]> {
+    if (!this.contacts.getValue().length) {
+      this.reloadContacts();
+    }
     return this.contacts;
   }
 
-  getById(id: number): Contact {
-    return this.contacts.find(c => c.id === id);
+  getById(id: number): Observable<Contact> {
+    return this.contacts
+      .pipe(
+        switchMap(contacts => {
+          const contact = contacts.find(c => c.id === id);
+          if (!contact) {
+            this.reloadContacts();
+          }
+          return of(contact);
+        })
+      );
+  }
+
+  private reloadContacts() {
+    this.contactHttpService.get()
+      .pipe(tap((contacts) => this.contacts.next(contacts)))
+      .subscribe();
   }
 }
