@@ -1,0 +1,20 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row fxLayout="row" fxLayoutAlign="start center">
+    <div fxLayoutAlign="start center">
+      <mat-icon svgIcon="trimble-logo" class="ca-trimble-toolbar-logo" fxHide.lt-sm></mat-icon>
+    </div>
+    <span>Contacts App</span>
+    <div fxFlex fxLayoutAlign="end center">
+      <button mat-button [matMenuTriggerFor]="translateMenu">
+        <mat-icon>translate</mat-icon>
+      </button>
+      <mat-menu #translateMenu="matMenu">
+        <button mat-menu-item>Finnish</button>
+        <button mat-menu-item>English</button>
+      </mat-menu>
+    </div>
+  </mat-toolbar-row>
+  <mat-toolbar-row class="ca-navigation-bar-container">
+    <ca-navigation-bar fxFill></ca-navigation-bar>
+  </mat-toolbar-row>
+</mat-toolbar>

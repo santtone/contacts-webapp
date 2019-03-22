@@ -10,14 +10,25 @@ export const RouteConfig: Routes = [
   },
   {
     path: 'contacts',
-    component: ContactListComponent
+    component: ContactListComponent,
+    data: {
+      pathName: 'contacts',
+    }
   },
   {
     path: 'contacts/new',
     component: ContactDetailsComponent,
+    data: {
+      pathName: 'create',
+      parentPathName: 'contacts'
+    }
   },
   {
     path: 'contacts/:id',
     component: ContactDetailsComponent,
+    data: {
+      pathName: 'edit',
+      parentPathName: 'contacts'
+    }
   }
 ];

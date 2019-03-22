@@ -1,5 +1,13 @@
 import {NgModule} from '@angular/core';
-import {MatButtonModule, MatCardModule, MatIconModule, MatInputModule, MatListModule, MatToolbarModule} from '@angular/material';
+import {
+  MatButtonModule,
+  MatCardModule,
+  MatIconModule,
+  MatInputModule,
+  MatListModule,
+  MatMenuModule,
+  MatToolbarModule
+} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 const materialModules: any[] = [
@@ -9,7 +17,8 @@ const materialModules: any[] = [
   MatListModule,
   MatToolbarModule,
   MatIconModule,
-  MatCardModule
+  MatCardModule,
+  MatMenuModule
 ];
 
 @NgModule({
