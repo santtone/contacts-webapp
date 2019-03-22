@@ -14,6 +14,10 @@ import {ContactAddressToTextPipe} from './contact/pipes/contact-address-to-text.
 import {HttpClientModule} from '@angular/common/http';
 import {ContactHttpService} from './contact/services/contact-http.service';
 import {NgPipesModule} from 'ngx-pipes';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
+import { NavigationBarComponent } from './layout/navigation-bar/navigation-bar.component';
+import { ToolbarComponent } from './layout/toolbar/toolbar.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,9 @@ import {NgPipesModule} from 'ngx-pipes';
     ContactListComponent,
     ContactDetailsComponent,
     ContactListItemComponent,
-    ContactAddressToTextPipe
+    ContactAddressToTextPipe,
+    NavigationBarComponent,
+    ToolbarComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +36,8 @@ import {NgPipesModule} from 'ngx-pipes';
     FlexLayoutModule,
     HttpClientModule,
     RouterModule.forRoot(RouteConfig),
-    NgPipesModule
+    NgPipesModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     ContactService,
