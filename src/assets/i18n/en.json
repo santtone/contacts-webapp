@@ -1,0 +1,18 @@
+{
+  "route": {
+    "contacts": "Contacts",
+    "contacts.edit": "Edit",
+    "contacts.create": "Create"
+  },
+  "language": {
+    "finnish": "Finnish",
+    "english": "English"
+  },
+  "contact": {
+    "firstName": "First name",
+    "lastName": "Last name",
+    "streetAddress": "Street address",
+    "postCode": "Post code",
+    "city": "City"
+  }
+}

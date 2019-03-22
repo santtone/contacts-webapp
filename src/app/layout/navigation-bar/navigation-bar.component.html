@@ -6,7 +6,7 @@
   </div>
   <div fxLayout="row" fxLayoutAlign="start center" class="ca-navigation-bar-path">
     <div *ngFor="let route of routes; let i = index" fxLayoutAlign="start center">
-      <span ngClass="{{route === selectedRoute && 'ca-navigation-bar-selected-item'}}">{{route}}</span>
+      <span ngClass="{{route === selectedRoute && 'ca-selected-item'}}">{{route | translate}}</span>
       <mat-icon class="ca-navigation-bar-path-icon" *ngIf="i < routes.length - 1">chevron_right</mat-icon>
     </div>
   </div>

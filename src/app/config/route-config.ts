@@ -12,14 +12,14 @@ export const RouteConfig: Routes = [
     path: 'contacts',
     component: ContactListComponent,
     data: {
-      pathName: 'contacts',
+      pathName: 'route.contacts',
     }
   },
   {
     path: 'contacts/new',
     component: ContactDetailsComponent,
     data: {
-      pathName: 'create',
+      pathName: 'route.contacts.create',
       parentPathName: 'contacts'
     }
   },
@@ -27,7 +27,7 @@ export const RouteConfig: Routes = [
     path: 'contacts/:id',
     component: ContactDetailsComponent,
     data: {
-      pathName: 'edit',
+      pathName: 'route.contacts.edit',
       parentPathName: 'contacts'
     }
   }

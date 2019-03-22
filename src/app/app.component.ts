@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {MatIconRegistry} from '@angular/material';
 import {DomSanitizer} from '@angular/platform-browser';
 import {ActivatedRoute, ActivatedRouteSnapshot, NavigationEnd, Router} from '@angular/router';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'ca-root',
@@ -12,13 +13,14 @@ export class AppComponent implements OnInit {
 
   title: string;
 
-  constructor(private iconRegistry: MatIconRegistry, private sanitizer: DomSanitizer) {
+  constructor(private iconRegistry: MatIconRegistry, private sanitizer: DomSanitizer, private translate: TranslateService) {
     this.title = 'Contacts app';
     this.registerCustomIcons();
+    translate.setDefaultLang('en');
+    translate.use('en');
   }
 
   ngOnInit(): void {
-
   }
 
   private registerCustomIcons() {

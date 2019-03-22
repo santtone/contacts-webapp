@@ -11,13 +11,19 @@ import {ContactService} from './contact/services/contact.service';
 import {ContactListItemComponent} from './contact/contact-list/contact-list-item/contact-list-item.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {ContactAddressToTextPipe} from './contact/pipes/contact-address-to-text.pipe';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {ContactHttpService} from './contact/services/contact-http.service';
 import {NgPipesModule} from 'ngx-pipes';
-import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
-import { NavigationBarComponent } from './layout/navigation-bar/navigation-bar.component';
-import { ToolbarComponent } from './layout/toolbar/toolbar.component';
+import {ServiceWorkerModule} from '@angular/service-worker';
+import {environment} from '../environments/environment';
+import {NavigationBarComponent} from './layout/navigation-bar/navigation-bar.component';
+import {ToolbarComponent} from './layout/toolbar/toolbar.component';
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -36,8 +42,15 @@ import { ToolbarComponent } from './layout/toolbar/toolbar.component';
     FlexLayoutModule,
     HttpClientModule,
     RouterModule.forRoot(RouteConfig),
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (createTranslateLoader),
+        deps: [HttpClient]
+      }
+    }),
     NgPipesModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production})
   ],
   providers: [
     ContactService,

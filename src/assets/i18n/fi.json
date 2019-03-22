@@ -1,0 +1,18 @@
+{
+  "route": {
+    "contacts": "Yhteystiedot",
+    "contacts.edit": "Muokkaa",
+    "contacts.create": "Luo uusi"
+  },
+  "language": {
+    "finnish": "Suomi",
+    "english": "Englanti"
+  },
+  "contact": {
+    "firstName": "Etunimi",
+    "lastName": "Sukunimi",
+    "streetAddress": "Katuosoite",
+    "postCode": "Postinumero",
+    "city": "Kaupunki"
+  }
+}
