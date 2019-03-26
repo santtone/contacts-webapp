@@ -1,7 +1,7 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MaterialDesignModule} from './config/material-design.module';
 import {ContactListComponent} from './contact/contact-list/contact-list.component';
 import {ContactDetailsComponent} from './contact/contact-details/contact-details.component';
@@ -42,6 +42,7 @@ export function createTranslateLoader(http: HttpClient) {
     MaterialDesignModule,
     FlexLayoutModule,
     HttpClientModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(RouteConfig),
     TranslateModule.forRoot({
       loader: {

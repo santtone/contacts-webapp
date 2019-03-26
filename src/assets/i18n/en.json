@@ -1,4 +1,8 @@
 {
+  "formMessage": {
+    "required": "{{value}} is required",
+    "numbersOnly": "Only numbers allowed"
+  },
   "route": {
     "contacts": "Contacts",
     "contacts.edit": "Edit",
