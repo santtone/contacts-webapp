@@ -1,4 +1,8 @@
 {
+  "formMessage": {
+    "required": "{{value}} on pakollinen",
+    "numbersOnly": "Vain numerot sallittu"
+  },
   "route": {
     "contacts": "Yhteystiedot",
     "contacts.edit": "Muokkaa",

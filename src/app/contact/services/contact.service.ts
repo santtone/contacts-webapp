@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {Contact} from '../contact';
 import {BehaviorSubject, Observable, of} from 'rxjs';
 import {ContactHttpService} from './contact-http.service';
-import {finalize, switchMap, take, tap} from 'rxjs/operators';
+import {finalize, skipWhile, switchMap, take, tap} from 'rxjs/operators';
 import {LoadingBarService} from '../../services/loading-bar.service';
 
 @Injectable({
@@ -32,7 +32,8 @@ export class ContactService {
             this.reloadContacts();
           }
           return of(contact);
-        })
+        }),
+        skipWhile((c) => !c)
       );
   }
 

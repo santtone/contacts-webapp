@@ -1,25 +1,44 @@
-<div *ngIf="contact" fxLayout="column" fxLayoutAlign="start center" class="ca-card-container">
-  <mat-card fxLayout="column" class="ca-card">
-    <div fxLayout="row" fxLayoutAlign="center center">
-      <mat-icon class="ca-contact-details-icon">accessible_forward</mat-icon>
-    </div>
-    <mat-form-field>
-      <input matInput placeholder="{{'contact.firstName' | translate}}" [(ngModel)]="contact.firstName">
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput placeholder="{{'contact.lastName' | translate}}" [(ngModel)]="contact.lastName">
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput placeholder="{{'contact.streetAddress' | translate}}" [(ngModel)]="contact.streetAddress">
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput placeholder="{{'contact.postCode' | translate}}" [(ngModel)]="contact.postCode">
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput placeholder="{{'contact.city' | translate}}" [(ngModel)]="contact.city">
-    </mat-form-field>
-  </mat-card>
-</div>
-<button mat-fab color="accent" class="ca-fab" (click)="onSave()">
-  <mat-icon>check</mat-icon>
-</button>
+<ng-container *ngIf="contactForm">
+  <form [formGroup]="contactForm" fxLayout="column" fxLayoutAlign="start center" class="ca-card-container">
+    <mat-card fxLayout="column" class="ca-card" fxLayoutGap="12px">
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <mat-icon class="ca-contact-details-icon">accessible_forward</mat-icon>
+      </div>
+      <mat-form-field appearance="legacy">
+        <mat-label>{{'contact.firstName' | translate}}</mat-label>
+        <input matInput placeholder="{{'contact.firstName' | translate}}" formControlName="firstName">
+        <mat-error class="error-message"
+                   *ngIf="contactForm.get('firstName').dirty || contactForm.get('firstName').touched">
+          {{'formMessage.required' | translate:{value: 'contact.firstName' | translate} }}
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="legacy">
+        <mat-label>{{'contact.lastName' | translate}}</mat-label>
+        <input matInput placeholder="{{'contact.lastName' | translate}}" formControlName="lastName">
+        <mat-error class="error-message"
+                   *ngIf="contactForm.get('lastName').dirty || contactForm.get('lastName').touched">
+          {{'formMessage.required' | translate:{value: 'contact.lastName' | translate} }}
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="legacy">
+        <mat-label>{{'contact.streetAddress' | translate}}</mat-label>
+        <input matInput placeholder="{{'contact.streetAddress' | translate}}" formControlName="streetAddress">
+      </mat-form-field>
+      <mat-form-field appearance="legacy">
+        <mat-label>{{'contact.postCode' | translate}}</mat-label>
+        <input matInput placeholder="{{'contact.postCode' | translate}}" formControlName="postCode">
+        <mat-error class="error-message"
+                   *ngIf="contactForm.get('postCode').dirty || contactForm.get('postCode').touched">
+          {{'formMessage.numbersOnly' | translate}}
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="legacy">
+        <mat-label>{{'contact.city' | translate}}</mat-label>
+        <input matInput placeholder="{{'contact.city' | translate}}" formControlName="city">
+      </mat-form-field>
+    </mat-card>
+  </form>
+  <button mat-fab color="accent" class="ca-fab" (click)="onSave()" [disabled]="contactForm.invalid">
+    <mat-icon>check</mat-icon>
+  </button>
+</ng-container>
