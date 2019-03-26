@@ -5,5 +5,16 @@
 .ca-contact-details-icon {
   border: 8px solid #EEEEEE;
   border-radius: 50%;
-  margin-top: -80px;
+  margin-top: -70px;
+}
+
+.ca-contact-details-content {
+  width: 100%;
+  max-width: 300px;
+}
+
+.ca-contact-details-delete {
+  position: absolute;
+  right: 16px;
+  top: 16px;
 }

@@ -1,23 +1,25 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {Contact} from '../contact';
 import {ContactService} from '../services/contact.service';
 import {Location} from '@angular/common';
-import {LoadingBarService} from '../../services/loading-bar.service';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {takeUntil} from 'rxjs/operators';
+import {Subject} from 'rxjs';
 
 @Component({
   selector: 'ca-contact-details',
   templateUrl: './contact-details.component.html',
   styleUrls: ['./contact-details.component.scss']
 })
-export class ContactDetailsComponent implements OnInit {
+export class ContactDetailsComponent implements OnInit, OnDestroy {
 
+  private readonly unsubscribe = new Subject();
   contact: Contact;
   contactForm: FormGroup;
 
   constructor(private route: ActivatedRoute, private contactService: ContactService, private location: Location,
-              private loading: LoadingBarService, private formBuilder: FormBuilder) {
+              private formBuilder: FormBuilder) {
   }
 
   ngOnInit() {
@@ -27,6 +29,7 @@ export class ContactDetailsComponent implements OnInit {
       this.initContactForm();
     } else {
       this.contactService.getById(Number(id))
+        .pipe(takeUntil(this.unsubscribe))
         .subscribe(contact => {
           this.contact = contact;
           this.initContactForm();
@@ -37,11 +40,18 @@ export class ContactDetailsComponent implements OnInit {
   onSave() {
     const contact: Contact = Object.assign(this.contact, this.contactForm.value);
     const observable = !contact.id ? this.contactService.create(contact) : this.contactService.update(contact);
-    this.loading.start();
     observable.subscribe(() => this.location.back());
   }
 
+  onDelete() {
+    const contact: Contact = Object.assign(this.contact, this.contactForm.value);
+    this.contactService.delete(contact).subscribe(() => this.location.back());
+  }
+
   private initContactForm() {
+    if (!this.contact) {
+      return;
+    }
     this.contactForm = this.formBuilder.group(
       {
         firstName: [this.contact.firstName, Validators.required],
@@ -51,5 +61,10 @@ export class ContactDetailsComponent implements OnInit {
         city: [this.contact.city]
       }
     );
+  }
+
+  ngOnDestroy(): void {
+    this.unsubscribe.next();
+    this.unsubscribe.complete();
   }
 }

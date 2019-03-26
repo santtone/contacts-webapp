@@ -62,6 +62,19 @@ export class ContactService {
         }));
   }
 
+  delete(contact: Contact): Observable<any> {
+    this.loading.start();
+    return this.contactHttpService.delete(contact.id)
+      .pipe(
+        finalize(() => this.loading.stop()),
+        tap(() => {
+          let contacts = this.contacts.getValue();
+          contacts = contacts.filter(c => !(c.id === contact.id));
+          this.contacts.next(contacts);
+        })
+      );
+  }
+
   private reloadContacts() {
     this.loading.start();
     this.contactHttpService.get()

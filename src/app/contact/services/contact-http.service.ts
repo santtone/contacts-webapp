@@ -35,4 +35,8 @@ export class ContactHttpService {
   put(contact: Contact): Observable<Contact> {
     return this.http.put<Contact>(`${this.url}/${contact.id}`, contact);
   }
+
+  delete(id: number): Observable<any> {
+    return this.http.delete(`${this.url}/${id}`);
+  }
 }
