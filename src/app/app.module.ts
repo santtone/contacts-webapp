@@ -21,6 +21,7 @@ import {ToolbarComponent} from './layout/toolbar/toolbar.component';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {LoadingBarService} from './services/loading-bar.service';
+import {TextIconModule} from './utils/text-icon/text-icon.module';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -35,6 +36,7 @@ export function createTranslateLoader(http: HttpClient) {
     ContactAddressToTextPipe,
     NavigationBarComponent,
     ToolbarComponent
+
   ],
   imports: [
     BrowserModule,
@@ -52,7 +54,8 @@ export function createTranslateLoader(http: HttpClient) {
       }
     }),
     NgPipesModule,
-    ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production})
+    ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production}),
+    TextIconModule
   ],
   providers: [
     ContactService,

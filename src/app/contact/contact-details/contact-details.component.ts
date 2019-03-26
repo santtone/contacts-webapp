@@ -42,7 +42,6 @@ export class ContactDetailsComponent implements OnInit {
   }
 
   private initContactForm() {
-    console.log(this.contact);
     this.contactForm = this.formBuilder.group(
       {
         firstName: [this.contact.firstName, Validators.required],

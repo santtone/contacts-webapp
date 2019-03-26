@@ -1,10 +1,9 @@
-.ca-contact-details-icon{
-  width: 80px;
-  height: 80px;
-  font-size: 80px;
-  background: rgba(0,0,0,0.6);
+.ca-contact-details-card-container {
+  margin-top: 50px;
+}
+
+.ca-contact-details-icon {
+  border: 5px solid #EEEEEE;
   border-radius: 50%;
-  padding: 24px;
-  color: white;
-  margin: 12px;
+  margin-top: -80px;
 }
