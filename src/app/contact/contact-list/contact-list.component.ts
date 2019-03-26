@@ -11,6 +11,7 @@ import {ContactService} from '../services/contact.service';
 export class ContactListComponent implements OnInit {
 
   contacts: Contact[];
+  searchText: string;
 
   constructor(private contactService: ContactService, private router: Router) {
     this.contacts = [];

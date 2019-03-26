@@ -1,11 +1,10 @@
 <ng-container *ngIf="contactForm">
-  <form [formGroup]="contactForm" fxLayout="column" fxLayoutAlign="start center" class="ca-card-container ca-contact-details-card-container">
+  <form [formGroup]="contactForm" fxLayout="column" fxLayoutAlign="start center"
+        class="ca-card-container ca-contact-details-card-container">
     <mat-card fxLayout="column" class="ca-card" fxLayoutGap="12px">
       <div fxLayout="row" fxLayoutAlign="center center">
         <ca-text-icon class="ca-contact-details-icon"
-                      [text]="[contactForm.get('firstName').value, contactForm.get('lastName').value]"
-                      [backgroundColor]="'#90CAF9'"
-                      [color]="'rgba(0,0,0,0.7)'"
+                      [text]="[contactForm.get('lastName').value, contactForm.get('firstName').value]"
                       [size]="100"></ca-text-icon>
       </div>
       <mat-form-field appearance="legacy">

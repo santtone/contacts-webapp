@@ -10,7 +10,7 @@ export class TextIconComponent implements OnInit, OnChanges {
   @Input() text: string | string[];
   @Input() size = 40;
   @Input() color = '#fff';
-  @Input() backgroundColor = '#42A5F5';
+  @Input() backgroundColor = '#4f8ccf';
 
   iconText: string;
 
@@ -27,7 +27,7 @@ export class TextIconComponent implements OnInit, OnChanges {
       if (!Array.isArray(value)) {
         value = [value];
       }
-      this.iconText = value.map(p => p.charAt(0).toUpperCase()).join('');
+      this.iconText = value.map(p => p ? p.charAt(0).toUpperCase() : '').join('');
     }
   }
 

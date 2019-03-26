@@ -1,4 +1,7 @@
 {
+  "common": {
+    "search": "Search"
+  },
   "formMessage": {
     "required": "{{value}} is required",
     "numbersOnly": "Only numbers allowed"

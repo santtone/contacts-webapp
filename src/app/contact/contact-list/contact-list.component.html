@@ -1,9 +1,16 @@
 <div class="ca-card-container" fxLayout="column" fxLayoutAlign="start center" fxFlexFill>
-  <mat-card class="ca-card">
-    <mat-nav-list>
-      <ca-contact-list-item *ngFor="let contact of contacts | orderBy: 'lastName'"
-                            [contact]="contact"
-                            (selected)="onContactSelected($event)">
+  <mat-card fxLayout="column" class="ca-card">
+    <div fxLayout="row" fxLayoutAlign="end center">
+      <mat-form-field appearance="legacy" floatLabel="never">
+        <input matInput placeholder="{{'common.search' | translate}}" [(ngModel)]="searchText">
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+    </div>
+    <mat-nav-list class="ca-contact-list">
+      <ca-contact-list-item
+        *ngFor="let contact of contacts | orderBy: 'lastName' |filterBy : ['firstName', 'lastName' , 'streetAddress', 'city', 'postCode']: searchText"
+        [contact]="contact"
+        (selected)="onContactSelected($event)">
       </ca-contact-list-item>
     </mat-nav-list>
   </mat-card>
@@ -11,4 +18,3 @@
 <button mat-fab color="accent" class="ca-fab" (click)="onContactAdd()">
   <mat-icon>add</mat-icon>
 </button>
-<router-outlet></router-outlet>

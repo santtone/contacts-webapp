@@ -1,4 +1,7 @@
 {
+  "common": {
+    "search": "Hae"
+  },
   "formMessage": {
     "required": "{{value}} on pakollinen",
     "numbersOnly": "Vain numerot sallittu"
