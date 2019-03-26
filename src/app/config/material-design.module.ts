@@ -5,7 +5,7 @@ import {
   MatIconModule,
   MatInputModule,
   MatListModule,
-  MatMenuModule,
+  MatMenuModule, MatProgressBarModule,
   MatToolbarModule
 } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -18,7 +18,8 @@ const materialModules: any[] = [
   MatToolbarModule,
   MatIconModule,
   MatCardModule,
-  MatMenuModule
+  MatMenuModule,
+  MatProgressBarModule
 ];
 
 @NgModule({

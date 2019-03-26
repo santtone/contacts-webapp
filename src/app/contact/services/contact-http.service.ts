@@ -10,7 +10,7 @@ import {environment} from '../../../environments/environment';
 })
 export class ContactHttpService {
 
-  private url: string;
+  private readonly url: string;
 
   constructor(private http: HttpClient) {
     this.url = `${environment.endpointUrl}/contacts`;
@@ -26,5 +26,13 @@ export class ContactHttpService {
           });
         })
       );
+  }
+
+  post(contact: Contact): Observable<Contact> {
+    return this.http.post<Contact>(this.url, contact);
+  }
+
+  put(contact: Contact): Observable<Contact> {
+    return this.http.put<Contact>(`${this.url}/${contact.id}`, contact);
   }
 }

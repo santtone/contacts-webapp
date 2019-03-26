@@ -1,2 +1,8 @@
-<ca-toolbar></ca-toolbar>
-<router-outlet></router-outlet>
+<div fxFlexFill>
+  <div fxLayout="column" fxLayoutAlign="start stretch" fxFlexFill>
+    <ca-toolbar></ca-toolbar>
+    <div class="ca-app-container">
+      <router-outlet fxFlexFill></router-outlet>
+    </div>
+  </div>
+</div>

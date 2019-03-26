@@ -2,7 +2,9 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {Contact} from '../contact';
 import {ContactService} from '../services/contact.service';
-import {take} from 'rxjs/operators';
+import {Observable} from 'rxjs';
+import {Location} from '@angular/common';
+import {LoadingBarService} from '../../services/loading-bar.service';
 
 @Component({
   selector: 'ca-contact-details',
@@ -13,7 +15,8 @@ export class ContactDetailsComponent implements OnInit {
 
   contact: Contact;
 
-  constructor(private route: ActivatedRoute, private contactService: ContactService) {
+  constructor(private route: ActivatedRoute, private contactService: ContactService, private location: Location,
+              private loading: LoadingBarService) {
   }
 
   ngOnInit() {
@@ -28,9 +31,9 @@ export class ContactDetailsComponent implements OnInit {
   }
 
   onSave() {
-    // if contact has id --> update, else create
-    console.log(this.contact);
-    console.log('TODO');
+    const observable = !this.contact.id ? this.contactService.create(this.contact) : this.contactService.update(this.contact);
+    this.loading.start();
+    observable.subscribe(() => this.location.back());
   }
 
 }

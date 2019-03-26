@@ -20,6 +20,7 @@ import {NavigationBarComponent} from './layout/navigation-bar/navigation-bar.com
 import {ToolbarComponent} from './layout/toolbar/toolbar.component';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {LoadingBarService} from './services/loading-bar.service';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -54,7 +55,8 @@ export function createTranslateLoader(http: HttpClient) {
   ],
   providers: [
     ContactService,
-    ContactHttpService
+    ContactHttpService,
+    LoadingBarService
   ],
   bootstrap: [AppComponent]
 })

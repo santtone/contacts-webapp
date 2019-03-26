@@ -5,6 +5,8 @@ html, body {
   padding: 0;
   margin: 0;
   background: #EEEEEE;
+  overflow: hidden;
+  height: 100%;
 }
 
 @font-face {
@@ -37,4 +39,5 @@ html, body {
 .ca-card {
   max-width: 500px;
   width: 100%;
+  margin: 16px;
 }
