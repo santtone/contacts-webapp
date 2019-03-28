@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1553806592217,
+  "timestamp": 1553807656446,
   "index": "/contacts-webapp/index.html",
   "assetGroups": [
     {
@@ -39,18 +39,7 @@
       "patterns": []
     }
   ],
-  "dataGroups": [
-    {
-      "patterns": [
-        "\\/contacts"
-      ],
-      "strategy": "freshness",
-      "maxSize": 50,
-      "maxAge": 1800000,
-      "timeoutMs": 5000,
-      "version": 1
-    }
-  ],
+  "dataGroups": [],
   "hashTable": {
     "/contacts-webapp/assets/i18n/en.json": "dc6f9b419f56cf27dfcf9d865cd05582b3e70e85",
     "/contacts-webapp/assets/i18n/fi.json": "7f12e2fad5283000c170fa6875d05c2b45a55d0b",
