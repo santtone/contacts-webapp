@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1553790967999,
+  "timestamp": 1553791438934,
   "index": "https://santtone.github.io/contacts-webapp/index.html",
   "assetGroups": [
     {
@@ -10,7 +10,7 @@
         "https://santtone.github.io/contacts-webapp/es2015-polyfills.4a4cfea0ce682043f4e9.js",
         "https://santtone.github.io/contacts-webapp/favicon.ico",
         "https://santtone.github.io/contacts-webapp/index.html",
-        "https://santtone.github.io/contacts-webapp/main.dfc55bcc0bb8a97af4b6.js",
+        "https://santtone.github.io/contacts-webapp/main.cc8f5a5d03924526c228.js",
         "https://santtone.github.io/contacts-webapp/polyfills.407a467dedb63cfdd103.js",
         "https://santtone.github.io/contacts-webapp/runtime.a5dd35324ddfd942bef1.js",
         "https://santtone.github.io/contacts-webapp/styles.6a22dd8c39c9952724d9.css"
@@ -65,8 +65,8 @@
     "https://santtone.github.io/contacts-webapp/assets/trimble-logo.svg": "d709f458ba767c4991b110e5a74d33b618c7d419",
     "https://santtone.github.io/contacts-webapp/es2015-polyfills.4a4cfea0ce682043f4e9.js": "b7a81c61d32b0b12737f0c13f45973ba391cd7f9",
     "https://santtone.github.io/contacts-webapp/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "https://santtone.github.io/contacts-webapp/index.html": "e32d45eec0a2c7c3ba61c35bd394c8b86a5acc93",
-    "https://santtone.github.io/contacts-webapp/main.dfc55bcc0bb8a97af4b6.js": "8ba85e7514236106a36b494aa19c878708e56310",
+    "https://santtone.github.io/contacts-webapp/index.html": "9dcdece442106e3f4747c29a8009064d138acfd5",
+    "https://santtone.github.io/contacts-webapp/main.cc8f5a5d03924526c228.js": "1fa464e6982e2bdb3080f4c709431200ef01e81c",
     "https://santtone.github.io/contacts-webapp/material-icons.658dde714e624426b1f0.woff2": "98cfbf585103cfd9604971b517cfc690729c889a",
     "https://santtone.github.io/contacts-webapp/polyfills.407a467dedb63cfdd103.js": "ffa449995bf2eba2ccd0a002417214f7eb75e7b5",
     "https://santtone.github.io/contacts-webapp/runtime.a5dd35324ddfd942bef1.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
