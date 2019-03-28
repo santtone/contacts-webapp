@@ -4,7 +4,7 @@
 @include mat-core();
 
 $tfe-primary: mat-palette($color-trimble-primary, 500, 500, 500);
-$tfe-accent: mat-palette($color-trimble-accent, 500, 500, 500);
+$tfe-accent: mat-palette($color-trimble-accent, 500, 50, 900);
 $tfe-warn: mat-palette($mat-red);
 
 $tfe-theme: mat-light-theme($tfe-primary, $tfe-accent, $tfe-warn);

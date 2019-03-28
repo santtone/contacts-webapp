@@ -15,6 +15,9 @@
     "finnish": "Finnish",
     "english": "English"
   },
+  "contactList": {
+    "empty": "No Contacts..."
+  },
   "contact": {
     "firstName": "First name",
     "lastName": "Last name",

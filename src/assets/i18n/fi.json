@@ -15,6 +15,9 @@
     "finnish": "Suomi",
     "english": "Englanti"
   },
+  "contactList": {
+    "empty": "Ei Yhteystietoja..."
+  },
   "contact": {
     "firstName": "Etunimi",
     "lastName": "Sukunimi",
