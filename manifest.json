@@ -5,7 +5,7 @@
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "/",
-  "start_url": "https://santtone.github.io/contacts-webapp/",
+  "start_url": "https://santtone.github.io/contacts-webapp",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
