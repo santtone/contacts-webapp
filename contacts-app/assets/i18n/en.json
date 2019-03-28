@@ -1,0 +1,28 @@
+{
+  "common": {
+    "search": "Search"
+  },
+  "formMessage": {
+    "required": "{{value}} is required",
+    "numbersOnly": "Only numbers allowed"
+  },
+  "route": {
+    "contacts": "Contacts",
+    "contacts.edit": "Edit",
+    "contacts.create": "Create"
+  },
+  "language": {
+    "finnish": "Finnish",
+    "english": "English"
+  },
+  "contactList": {
+    "empty": "No Contacts..."
+  },
+  "contact": {
+    "firstName": "First name",
+    "lastName": "Last name",
+    "streetAddress": "Street address",
+    "postCode": "Post code",
+    "city": "City"
+  }
+}
