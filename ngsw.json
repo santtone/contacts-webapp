@@ -1,19 +1,19 @@
 {
   "configVersion": 1,
-  "timestamp": 1553791991264,
-  "index": "/https://santtone.github.io/contacts-webapp/index.html",
+  "timestamp": 1553792338822,
+  "index": "/contacts-webapp/index.html",
   "assetGroups": [
     {
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
-        "/https://santtone.github.io/contacts-webapp/es2015-polyfills.4a4cfea0ce682043f4e9.js",
-        "/https://santtone.github.io/contacts-webapp/favicon.ico",
-        "/https://santtone.github.io/contacts-webapp/index.html",
-        "/https://santtone.github.io/contacts-webapp/main.cc8f5a5d03924526c228.js",
-        "/https://santtone.github.io/contacts-webapp/polyfills.407a467dedb63cfdd103.js",
-        "/https://santtone.github.io/contacts-webapp/runtime.a5dd35324ddfd942bef1.js",
-        "/https://santtone.github.io/contacts-webapp/styles.6a22dd8c39c9952724d9.css"
+        "/contacts-webapp/es2015-polyfills.4a4cfea0ce682043f4e9.js",
+        "/contacts-webapp/favicon.ico",
+        "/contacts-webapp/index.html",
+        "/contacts-webapp/main.cc8f5a5d03924526c228.js",
+        "/contacts-webapp/polyfills.407a467dedb63cfdd103.js",
+        "/contacts-webapp/runtime.a5dd35324ddfd942bef1.js",
+        "/contacts-webapp/styles.6a22dd8c39c9952724d9.css"
       ],
       "patterns": []
     },
@@ -21,19 +21,19 @@
       "installMode": "lazy",
       "updateMode": "prefetch",
       "urls": [
-        "/https://santtone.github.io/contacts-webapp/assets/i18n/en.json",
-        "/https://santtone.github.io/contacts-webapp/assets/i18n/fi.json",
-        "/https://santtone.github.io/contacts-webapp/assets/icons/icon-128x128.png",
-        "/https://santtone.github.io/contacts-webapp/assets/icons/icon-144x144.png",
-        "/https://santtone.github.io/contacts-webapp/assets/icons/icon-152x152.png",
-        "/https://santtone.github.io/contacts-webapp/assets/icons/icon-192x192.png",
-        "/https://santtone.github.io/contacts-webapp/assets/icons/icon-384x384.png",
-        "/https://santtone.github.io/contacts-webapp/assets/icons/icon-512x512.png",
-        "/https://santtone.github.io/contacts-webapp/assets/icons/icon-72x72.png",
-        "/https://santtone.github.io/contacts-webapp/assets/icons/icon-96x96.png",
-        "/https://santtone.github.io/contacts-webapp/assets/material-icons.woff2",
-        "/https://santtone.github.io/contacts-webapp/assets/trimble-logo.svg",
-        "/https://santtone.github.io/contacts-webapp/material-icons.658dde714e624426b1f0.woff2"
+        "/contacts-webapp/assets/i18n/en.json",
+        "/contacts-webapp/assets/i18n/fi.json",
+        "/contacts-webapp/assets/icons/icon-128x128.png",
+        "/contacts-webapp/assets/icons/icon-144x144.png",
+        "/contacts-webapp/assets/icons/icon-152x152.png",
+        "/contacts-webapp/assets/icons/icon-192x192.png",
+        "/contacts-webapp/assets/icons/icon-384x384.png",
+        "/contacts-webapp/assets/icons/icon-512x512.png",
+        "/contacts-webapp/assets/icons/icon-72x72.png",
+        "/contacts-webapp/assets/icons/icon-96x96.png",
+        "/contacts-webapp/assets/material-icons.woff2",
+        "/contacts-webapp/assets/trimble-logo.svg",
+        "/contacts-webapp/material-icons.658dde714e624426b1f0.woff2"
       ],
       "patterns": []
     }
@@ -51,26 +51,26 @@
     }
   ],
   "hashTable": {
-    "/https://santtone.github.io/contacts-webapp/assets/i18n/en.json": "dc6f9b419f56cf27dfcf9d865cd05582b3e70e85",
-    "/https://santtone.github.io/contacts-webapp/assets/i18n/fi.json": "7f12e2fad5283000c170fa6875d05c2b45a55d0b",
-    "/https://santtone.github.io/contacts-webapp/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
-    "/https://santtone.github.io/contacts-webapp/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
-    "/https://santtone.github.io/contacts-webapp/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
-    "/https://santtone.github.io/contacts-webapp/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
-    "/https://santtone.github.io/contacts-webapp/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
-    "/https://santtone.github.io/contacts-webapp/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
-    "/https://santtone.github.io/contacts-webapp/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
-    "/https://santtone.github.io/contacts-webapp/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
-    "/https://santtone.github.io/contacts-webapp/assets/material-icons.woff2": "98cfbf585103cfd9604971b517cfc690729c889a",
-    "/https://santtone.github.io/contacts-webapp/assets/trimble-logo.svg": "d709f458ba767c4991b110e5a74d33b618c7d419",
-    "/https://santtone.github.io/contacts-webapp/es2015-polyfills.4a4cfea0ce682043f4e9.js": "b7a81c61d32b0b12737f0c13f45973ba391cd7f9",
-    "/https://santtone.github.io/contacts-webapp/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "/https://santtone.github.io/contacts-webapp/index.html": "66d4efd2ffc795a3a5c4a35d183da879df5b6941",
-    "/https://santtone.github.io/contacts-webapp/main.cc8f5a5d03924526c228.js": "1fa464e6982e2bdb3080f4c709431200ef01e81c",
-    "/https://santtone.github.io/contacts-webapp/material-icons.658dde714e624426b1f0.woff2": "98cfbf585103cfd9604971b517cfc690729c889a",
-    "/https://santtone.github.io/contacts-webapp/polyfills.407a467dedb63cfdd103.js": "ffa449995bf2eba2ccd0a002417214f7eb75e7b5",
-    "/https://santtone.github.io/contacts-webapp/runtime.a5dd35324ddfd942bef1.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
-    "/https://santtone.github.io/contacts-webapp/styles.6a22dd8c39c9952724d9.css": "891aaad8ebd5f87051230f92bf1c4594c6403a2f"
+    "/contacts-webapp/assets/i18n/en.json": "dc6f9b419f56cf27dfcf9d865cd05582b3e70e85",
+    "/contacts-webapp/assets/i18n/fi.json": "7f12e2fad5283000c170fa6875d05c2b45a55d0b",
+    "/contacts-webapp/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/contacts-webapp/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/contacts-webapp/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/contacts-webapp/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/contacts-webapp/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/contacts-webapp/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/contacts-webapp/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/contacts-webapp/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/contacts-webapp/assets/material-icons.woff2": "98cfbf585103cfd9604971b517cfc690729c889a",
+    "/contacts-webapp/assets/trimble-logo.svg": "d709f458ba767c4991b110e5a74d33b618c7d419",
+    "/contacts-webapp/es2015-polyfills.4a4cfea0ce682043f4e9.js": "b7a81c61d32b0b12737f0c13f45973ba391cd7f9",
+    "/contacts-webapp/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
+    "/contacts-webapp/index.html": "051541b191be117e45cfabe9485ce6b0099249e7",
+    "/contacts-webapp/main.cc8f5a5d03924526c228.js": "1fa464e6982e2bdb3080f4c709431200ef01e81c",
+    "/contacts-webapp/material-icons.658dde714e624426b1f0.woff2": "98cfbf585103cfd9604971b517cfc690729c889a",
+    "/contacts-webapp/polyfills.407a467dedb63cfdd103.js": "ffa449995bf2eba2ccd0a002417214f7eb75e7b5",
+    "/contacts-webapp/runtime.a5dd35324ddfd942bef1.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
+    "/contacts-webapp/styles.6a22dd8c39c9952724d9.css": "891aaad8ebd5f87051230f92bf1c4594c6403a2f"
   },
   "navigationUrls": [
     {
