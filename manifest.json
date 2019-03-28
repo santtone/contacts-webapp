@@ -1,5 +1,5 @@
 {
-  "pathName": "contacts-app",
+  "name": "contacts-app",
   "short_name": "contacts-app",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",

@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1553808548405,
+  "timestamp": 1553808949263,
   "index": "/contacts-webapp/index.html",
   "assetGroups": [
     {
@@ -57,7 +57,7 @@
     "/contacts-webapp/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
     "/contacts-webapp/index.html": "051541b191be117e45cfabe9485ce6b0099249e7",
     "/contacts-webapp/main.cc8f5a5d03924526c228.js": "1fa464e6982e2bdb3080f4c709431200ef01e81c",
-    "/contacts-webapp/manifest.json": "2b0d5233d7e014eec41c5e015fa225660fdcf641",
+    "/contacts-webapp/manifest.json": "b678e05e0ebba02e243079b07ec9269d3c67eca5",
     "/contacts-webapp/material-icons.658dde714e624426b1f0.woff2": "98cfbf585103cfd9604971b517cfc690729c889a",
     "/contacts-webapp/polyfills.407a467dedb63cfdd103.js": "ffa449995bf2eba2ccd0a002417214f7eb75e7b5",
     "/contacts-webapp/runtime.a5dd35324ddfd942bef1.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
