@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1553797829494,
+  "timestamp": 1553799370291,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -11,6 +11,7 @@
         "/favicon.ico",
         "/index.html",
         "/main.cc8f5a5d03924526c228.js",
+        "/manifest.json",
         "/polyfills.407a467dedb63cfdd103.js",
         "/runtime.a5dd35324ddfd942bef1.js",
         "/styles.6a22dd8c39c9952724d9.css"
@@ -65,8 +66,9 @@
     "/assets/trimble-logo.svg": "d709f458ba767c4991b110e5a74d33b618c7d419",
     "/es2015-polyfills.4a4cfea0ce682043f4e9.js": "b7a81c61d32b0b12737f0c13f45973ba391cd7f9",
     "/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "/index.html": "fefdb1f8264830bdbbffbd65787679dc7bfe02ba",
+    "/index.html": "3ea9c2bc2a9786c42ece6f2b51c81739c2133c39",
     "/main.cc8f5a5d03924526c228.js": "1fa464e6982e2bdb3080f4c709431200ef01e81c",
+    "/manifest.json": "ae08e6d5aca8aa44e80a67ee3edbaacc1f9514ca",
     "/material-icons.658dde714e624426b1f0.woff2": "98cfbf585103cfd9604971b517cfc690729c889a",
     "/polyfills.407a467dedb63cfdd103.js": "ffa449995bf2eba2ccd0a002417214f7eb75e7b5",
     "/runtime.a5dd35324ddfd942bef1.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
