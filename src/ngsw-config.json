@@ -9,7 +9,8 @@
           "/favicon.ico",
           "/index.html",
           "/*.css",
-          "/*.js"
+          "/*.js",
+          "/*.json"
         ]
       }
     },
@@ -20,22 +21,8 @@
       "resources": {
         "files": [
           "/assets/**",
-          "/*.(eot|svg|cur|jpg|png|webp|gif|otf|ttf|woff|woff2|ani)"
+          "/*.(eot|svg|cur|jpg|png|webp|gif|otf|ttf|woff|woff2|ani|json)"
         ]
-      }
-    }
-  ],
-  "dataGroups": [
-    {
-      "pathName": "api",
-      "urls": [
-        "/contacts"
-      ],
-      "cacheConfig": {
-        "strategy": "freshness",
-        "maxSize": 50,
-        "maxAge": "30m",
-        "timeout": "5s"
       }
     }
   ]

@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  endpointUrl: ''
+  endpointUrl: 'https://tfe-training.azurewebsites.net/api'
 };

@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "local-pwa": "ng build --prod --configuration=local-pwa && http-server ./dist/contacts-app"
+    "local-pwa": "ng build --prod --base-href \"\" --configuration=local-pwa && http-server ./dist/contacts-app"
   },
   "private": true,
   "dependencies": {
