@@ -1,4 +1,6 @@
-export class Contact {
+import {Storable} from '../config/state-management/storable';
+
+export class Contact implements Storable {
   id: number;
   firstName: string;
   lastName: string;

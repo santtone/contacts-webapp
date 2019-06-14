@@ -9,7 +9,7 @@
     </div>
     <mat-nav-list class="ca-contact-list">
       <ca-contact-list-item
-        *ngFor="let contact of contacts | orderBy: 'lastName' |filterBy : ['firstName', 'lastName' , 'streetAddress', 'city', 'postCode']: searchText"
+        *ngFor="let contact of contacts | orderBy: 'id' |filterBy : ['firstName', 'lastName' , 'streetAddress', 'city', 'postCode']: searchText"
         [contact]="contact"
         (selected)="onContactSelected($event)">
       </ca-contact-list-item>

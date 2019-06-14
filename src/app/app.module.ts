@@ -7,7 +7,7 @@ import {ContactListComponent} from './contact/contact-list/contact-list.componen
 import {ContactDetailsComponent} from './contact/contact-details/contact-details.component';
 import {RouterModule} from '@angular/router';
 import {RouteConfig} from './config/route-config';
-import {ContactService} from './contact/services/contact.service';
+import {ContactActionService} from './contact/services/contact-action.service';
 import {ContactListItemComponent} from './contact/contact-list/contact-list-item/contact-list-item.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {ContactAddressToTextPipe} from './contact/pipes/contact-address-to-text.pipe';
@@ -58,7 +58,7 @@ export function createTranslateLoader(http: HttpClient) {
     TextIconModule
   ],
   providers: [
-    ContactService,
+    ContactActionService,
     ContactHttpService,
     LoadingBarService
   ],

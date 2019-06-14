@@ -1,9 +1,10 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Contact} from '../contact';
 import {Router} from '@angular/router';
-import {ContactService} from '../services/contact.service';
+import {ContactActionService} from '../services/contact-action.service';
 import {Subject} from 'rxjs';
 import {takeUntil} from 'rxjs/operators';
+import {ContactStoreService} from '../services/contact-store.service';
 
 @Component({
   selector: 'ca-contact-list',
@@ -16,14 +17,18 @@ export class ContactListComponent implements OnInit, OnDestroy {
   contacts: Contact[];
   searchText: string;
 
-  constructor(private contactService: ContactService, private router: Router) {
-    this.contacts = [];
+  constructor(private contactActions: ContactActionService, private contactStore: ContactStoreService, private router: Router) {
+    this.contacts = [new Contact(1, 'asdasd', 'adsasd')];
   }
 
   ngOnInit() {
-    this.contactService.get()
+    this.contactStore.get()
       .pipe(takeUntil(this.unsubscribe))
       .subscribe(contacts => {
+        console.log(contacts);
+        if (!contacts.length) {
+          this.contactActions.find();
+        }
         this.contacts = contacts;
       });
   }
