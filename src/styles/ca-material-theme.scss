@@ -1,0 +1,12 @@
+@import '~@angular/material/theming';
+@import 'ca-colors';
+
+@include mat-core();
+
+$ca-primary: mat-palette($ca-color-primary, 500, 100, 700);
+$ca-accent: mat-palette($ca-color-accent, 500, 50, 900);
+$ca-warn: mat-palette($mat-red);
+
+$ca-theme: mat-light-theme($ca-primary, $ca-accent, $ca-warn);
+
+@include angular-material-theme($ca-theme);
