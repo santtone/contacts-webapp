@@ -24,6 +24,8 @@ import {ContactListItemComponent} from './contact/contact-list/contact-list-item
 import {ContactDetailsComponent} from './contact/contact-details/contact-details.component';
 import {ContactHttpService} from './contact/services/contact-http.service';
 import {HttpClientModule} from '@angular/common/http';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -49,7 +51,8 @@ import {HttpClientModule} from '@angular/common/http';
     MatFormFieldModule,
     MatInputModule,
     NgPipesModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     ContactService,
