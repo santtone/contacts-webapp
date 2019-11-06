@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'ca-root',
@@ -9,13 +10,12 @@ export class AppComponent implements OnInit {
 
   title: string;
 
-  constructor() {
+  constructor(private translate: TranslateService) {
     this.title = 'Contacts webapp';
   }
 
-  onAction(): void {
-  }
-
   ngOnInit(): void {
+    this.translate.setDefaultLang('fi');
+    this.translate.use('fi');
   }
 }

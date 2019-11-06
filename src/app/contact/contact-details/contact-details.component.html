@@ -6,7 +6,8 @@
       </div>
       <div fxLayout="row wrap" fxLayoutGap="12px">
         <mat-form-field fxFlex>
-          <input matInput formControlName="firstName" placeholder="First name" autocomplete="off">
+          <input matInput formControlName="firstName" placeholder="{{'contact.firstName' | translate}}"
+                 autocomplete="off">
           <mat-error>
             <span *ngIf="contactForm.controls['firstName'].hasError('required')">Required</span>
             <span *ngIf="contactForm.controls['firstName'].hasError('maxlength')">Max Length 20</span>
