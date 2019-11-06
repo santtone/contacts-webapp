@@ -19,12 +19,16 @@ import {RoutingModule} from './config/routing/routing.module';
 import {RouterModule} from '@angular/router';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {NgPipesModule} from 'ngx-pipes';
+import { ContactListItemComponent } from './contact/contact-list/contact-list-item/contact-list-item.component';
+import { ContactDetailsComponent } from './contact/contact-details/contact-details.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContactListComponent
+    ContactListComponent,
+    ContactListItemComponent,
+    ContactDetailsComponent
   ],
   imports: [
     BrowserModule,

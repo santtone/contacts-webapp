@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ContactService} from '../services/contact.service';
 import {Contact} from '../contact';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'ca-contact-list',
@@ -12,12 +13,16 @@ export class ContactListComponent implements OnInit {
   contacts: Contact[];
   filter: string;
 
-  constructor(private contactService: ContactService) {
+  constructor(private contactService: ContactService, private router: Router) {
     this.contacts = [];
   }
 
   ngOnInit() {
     this.contacts = this.contactService.getContacts();
+  }
+
+  onContactSelected(contact: Contact): void {
+    this.router.navigate(['/contacts', contact.id]);
   }
 
 }

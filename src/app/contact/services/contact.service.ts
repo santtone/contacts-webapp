@@ -18,4 +18,8 @@ export class ContactService {
   getContacts(): Contact[] {
     return this.contacts;
   }
+
+  getById(id: number): Contact {
+    return this.contacts.find(c => c.id === id);
+  }
 }
