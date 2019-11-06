@@ -26,5 +26,4 @@ export class ContactListComponent implements OnInit {
   onContactSelected(contact: Contact): void {
     this.router.navigate(['/contacts', contact.id]);
   }
-
 }

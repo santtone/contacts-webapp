@@ -9,3 +9,12 @@ html, body {
 body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+.ca-fab {
+  bottom: 20px;
+  right: 20px;
+
+  &.mat-fab {
+    position: fixed;
+  }
+}

@@ -1,4 +1,36 @@
-<mat-card>
-  {{contact?.firstName}}
-  {{contact?.lastName}}
-</mat-card>
+<div fxLayoutAlign="center start" fxFlexFill>
+  <mat-card class="ca-contact-details-card">
+    <div *ngIf="contactForm" fxLayout="column" [formGroup]="contactForm" fxLayoutALign="start center">
+      <div fxLayoutAlign="center center">
+        <mat-icon class="ca-contact-details-icon">accessible_forward</mat-icon>
+      </div>
+      <div fxLayout="row wrap" fxLayoutGap="12px">
+        <mat-form-field fxFlex>
+          <input matInput formControlName="firstName" placeholder="First name" autocomplete="off">
+          <mat-error>
+            <span *ngIf="contactForm.controls['firstName'].hasError('required')">Required</span>
+            <span *ngIf="contactForm.controls['firstName'].hasError('maxlength')">Max Length 20</span>
+            <span *ngIf="contactForm.controls['firstName'].hasError('containsNumber')">Contains number</span>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field fxFlex>
+          <input matInput formControlName="lastName" placeholder="Last name" autocomplete="off">
+          <mat-error>Required</mat-error>
+        </mat-form-field>
+      </div>
+      <mat-form-field>
+        <input matInput formControlName="streetAddress" placeholder="Street address" autocomplete="off">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput formControlName="city" placeholder="City" autocomplete="off">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput formControlName="postCode" placeholder="Postcode" autocomplete="off">
+        <mat-error>Only numbers allowed</mat-error>
+      </mat-form-field>
+    </div>
+  </mat-card>
+</div>
+<button mat-fab (click)="onSave()" class="ca-fab" [disabled]="contactForm?.invalid">
+  <mat-icon>check</mat-icon>
+</button>

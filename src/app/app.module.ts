@@ -2,16 +2,17 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
+  ErrorStateMatcher,
   MatButtonModule,
   MatCardModule,
   MatFormFieldModule,
   MatIconModule,
   MatInputModule,
   MatListModule,
-  MatToolbarModule
+  MatToolbarModule, ShowOnDirtyErrorStateMatcher
 } from '@angular/material';
 import {ContactService} from './contact/services/contact.service';
 import {ContactListComponent} from './contact/contact-list/contact-list.component';
@@ -47,11 +48,13 @@ import {HttpClientModule} from '@angular/common/http';
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
-    NgPipesModule
+    NgPipesModule,
+    ReactiveFormsModule
   ],
   providers: [
     ContactService,
-    ContactHttpService
+    ContactHttpService,
+    {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}
   ],
   bootstrap: [AppComponent]
 })
