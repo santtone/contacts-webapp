@@ -19,8 +19,10 @@ import {RoutingModule} from './config/routing/routing.module';
 import {RouterModule} from '@angular/router';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {NgPipesModule} from 'ngx-pipes';
-import { ContactListItemComponent } from './contact/contact-list/contact-list-item/contact-list-item.component';
-import { ContactDetailsComponent } from './contact/contact-details/contact-details.component';
+import {ContactListItemComponent} from './contact/contact-list/contact-list-item/contact-list-item.component';
+import {ContactDetailsComponent} from './contact/contact-details/contact-details.component';
+import {ContactHttpService} from './contact/services/contact-http.service';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -31,6 +33,7 @@ import { ContactDetailsComponent } from './contact/contact-details/contact-detai
     ContactDetailsComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
@@ -47,7 +50,8 @@ import { ContactDetailsComponent } from './contact/contact-details/contact-detai
     NgPipesModule
   ],
   providers: [
-    ContactService
+    ContactService,
+    ContactHttpService
   ],
   bootstrap: [AppComponent]
 })
